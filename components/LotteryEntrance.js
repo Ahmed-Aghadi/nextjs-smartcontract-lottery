@@ -11,7 +11,6 @@ export default function LotteryEntrance() {
     const [entranceFee, setEntranceFee] = useState("0")
     const [numPlayers, setNumPlayer] = useState("0")
     const [recentWinner, setRecentWinner] = useState("0")
-    console.log(chainId)
 
     const dispatch = useNotification()
 
@@ -21,7 +20,7 @@ export default function LotteryEntrance() {
         isFetching,
     } = useWeb3Contract({
         abi: abi,
-        contractAddress: raffleAddress, // specify the networkId
+        contractAddress: raffleAddress,
         functionName: "enterRaffle",
         params: {},
         msgValue: entranceFee,
@@ -29,21 +28,21 @@ export default function LotteryEntrance() {
 
     const { runContractFunction: getEntranceFee } = useWeb3Contract({
         abi: abi,
-        contractAddress: raffleAddress, // specify the networkId
+        contractAddress: raffleAddress,
         functionName: "getEntranceFee",
         params: {},
     })
 
     const { runContractFunction: getNumberOfPlayers } = useWeb3Contract({
         abi: abi,
-        contractAddress: raffleAddress, // specify the networkId
+        contractAddress: raffleAddress,
         functionName: "getNumberOfPlayers",
         params: {},
     })
 
     const { runContractFunction: getRecentWinner } = useWeb3Contract({
         abi: abi,
-        contractAddress: raffleAddress, // specify the networkId
+        contractAddress: raffleAddress,
         functionName: "getRecentWinner",
         params: {},
     })

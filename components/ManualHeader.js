@@ -13,7 +13,6 @@ export default function ManualHeader() {
         }
     }, [isWeb3Enabled])
 
-    // useEffect(() => {}, [])
     useEffect(() => {
         Moralis.onAccountChanged((account) => {
             console.log(`Account changed to ${account}`)
