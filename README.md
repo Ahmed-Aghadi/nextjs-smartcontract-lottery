@@ -1,6 +1,6 @@
 # Decentralized Lottery
 
-A decentralized lottery system in which multiple users can join and one of them would be randomly selected as a winner.
+A decentralized lottery system in which multiple users can join and one of them would be randomly selected as a winner after a certain time period.
 
 Try this at : [Decentralized Lottery](https://summer-scene-4302.on.fleek.co/)
 
